@@ -1,6 +1,6 @@
 {
   "name": "vite-laravel-valet-tls-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Laravel Valet TLS plugin for Vite.",
   "keywords": [
     "laravel",
