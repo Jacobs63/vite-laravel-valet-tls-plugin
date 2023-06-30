@@ -1,0 +1,54 @@
+{
+  "name": "vite-laravel-valet-tls-plugin",
+  "version": "0.0.0",
+  "description": "Laravel Valet TLS plugin for Vite.",
+  "keywords": [
+    "laravel",
+    "vite",
+    "vite-plugin"
+  ],
+  "homepage": "https://github.com/jacobs63/vite-laravel-valet-tls-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacobs63/vite-laravel-valet-tls-plugin"
+  },
+  "license": "MIT",
+  "author": "Jakub Potocký",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build-plugin",
+    "build-plugin": "rm -rf dist && npm run build-plugin-types && npm run build-plugin-esm && npm run build-plugin-cjs",
+    "build-plugin-types": "tsc --emitDeclarationOnly",
+    "build-plugin-cjs": "esbuild src/index.ts --platform=node --format=cjs --outfile=./dist/index.cjs",
+    "build-plugin-esm": "esbuild src/index.ts --platform=node --format=esm --outfile=./dist/index.mjs",
+    "lint": "eslint --ext .ts ./src ./tests",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "esbuild": "0.16.10",
+    "eslint": "^8.14.0",
+    "typescript": "^4.6.4",
+    "vite": "^4.0.0",
+    "vitest": "^0.25.2"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.0 || ^4.0.0",
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
