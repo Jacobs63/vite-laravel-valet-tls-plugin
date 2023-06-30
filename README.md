@@ -58,3 +58,9 @@ export default defineConfig({
 ```
 
 The plugin will now automatically handle the certificates for you whenever running Vite in development mode.
+
+## Credits
+
+- [Freek Van der Herten](https://github.com/freekmurze)
+
+**This package is based on an article by Freek from Spatie, which gave me an idea that this whole thing is possible.**
