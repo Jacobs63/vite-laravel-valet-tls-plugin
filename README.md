@@ -41,7 +41,7 @@ Make sure you specify your Valet app url in your `.env`:
 MIX_APP_URL=http://my-app.test
 ```
 
-Optionally, you could explicitly set the Valet app url when configuring the plugin:
+Optionally, you could explicitly set the Valet app host when configuring the plugin:
 
 ```js
 import laravelValetTlsPlugin from 'vite-laravel-valet-tls-plugin'
